@@ -38,5 +38,18 @@ int main()
 
     inputFile.close();
 
+#ifdef _DEBUG
+
+    std::cout << "Student Data:" << std::endl;
+    for (const auto& student : students)   // Loop through the vector and print each
+    {
+        std::cout << student.firstName
+			      << " " 
+                  << student.lastName
+                  << std::endl;    
+    }
+
+#endif
+
     return 0;
 }
