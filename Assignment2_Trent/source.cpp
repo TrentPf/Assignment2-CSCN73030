@@ -19,7 +19,7 @@ int main()
 #ifdef PRE_RELEASE  // If PRE_RELEASE is defined, print a message indicating that the pre-release version is running
     std::cout << "Running Pre-Release Version" << std::endl;
 #else   // If PRE_RELEASE is not defined, print a message indicating that the release version is running
-	std::cout << "Running Release Version" << std::endl;
+	std::cout << "Running Standard Version" << std::endl;
 #endif
 
 	std::vector<STUDENT_DATA> students; // Vector to hold all student data read from the file
@@ -47,7 +47,7 @@ int main()
 		std::getline(ss, student.firstName, ',');   // Read first name until the comma, then read last name until the end of the line
 
 #ifdef PRE_RELEASE  // If PRE_RELEASE is defined, read the email as well
-        std::getline(ss, student.lastName);
+        std::getline(ss, student.lastName, ',');
         std::getline(ss, student.email);
 #else   //  If PRE_RELEASE is not defined, read the last name only
 		std::getline(ss, student.lastName);
