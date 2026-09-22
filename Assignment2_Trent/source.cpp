@@ -64,13 +64,12 @@ int main()
     for (const auto& student : students)   // Loop through the vector and print each
     {
         std::cout << student.firstName
-			      << " " 
-                  << student.lastName
+            << " "
+            << student.lastName;
 #ifdef PRE_RELEASE  // If PRE_RELEASE is defined, print the email as well
-	    std::cout << " " << student.email
+            std::cout << " " << student.email;
 #endif
-
-                  << std::endl;    
+            std::cout << std::endl;
     }
 
 #endif
